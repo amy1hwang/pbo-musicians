@@ -1,3 +1,48 @@
-<p>
-  edit-profile works!
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Edit Musician Profile</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Musician Name:</label>
+        <br>
+        <span>*</span><input [(ngModel)]="selectedProfile.name">
+      </div>
+
+      <div>
+        <label>Instrument:</label>
+        <br>
+        <span>*</span><select [(ngModel)]="selectedProfile.instruement">
+          <option value="Violin">Violin</option>
+          <option value="Viola">Violin</option>
+          <option value="Violoncello">Violoncello</option>
+          <option value="Viola da gamba">Viola da gamba</option>
+          <option value="Contrabass and Violone">Contrabass and Violone</option>
+          <option value="Harpsichord and Organ">Harpsichord and Organ</option>
+          <option value="Guitar, Theorbo and Lute">Guitar, Theorbo and Lute</option>
+          <option value="Flute">Flute</option>
+          <option value="Oboe">Oboe</option>
+          <option value="Recorder">Recorder</option>
+          <option value="Bassoon">Bassoon</option>
+          <option value="Horn">Horn</option>
+          <option value="Trumpet">Trumpet</option>
+          <option value="Timpani and Percussion">Timpani and Percussion</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Chair:</label>
+        <br>
+        <input [(ngModel)]="selectedProfile.chair">
+      </div>
+
+      <div>
+        <label>Musician Bio:</label>
+        <br>
+        <span>*</span><textarea [(ngModel)]="selectedProfile.bio"></textarea>
+      </div>
+      <button (click)="beginUpdatingProfile(selectedProfile)">Update</button>
+    </div>
+  </div>
+</div>

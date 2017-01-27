@@ -13,6 +13,8 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 export class ProfileListComponent implements OnInit {
   profiles: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
+
   constructor(private router: Router, private profileService: ProfileService){}
 
   ngOnInit(){

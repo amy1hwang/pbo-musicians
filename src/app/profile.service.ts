@@ -20,7 +20,13 @@ export class ProfileService {
 
   getProfileById(profileId: string){
     return this.angularFire.database.object('profiles/' + profileId);
-
   }
 
+  updateProfile(localUpdatedProfile){
+    var profileEntryInFirebase = this.getProfileById(localUpdatedProfile.$key);
+    profileEntryInFirebase.update({name: localUpdatedProfile.name,
+                                instrument: localUpdatedProfile.instrument,
+                                chair: localUpdatedProfile.chair,
+                                bio: localUpdatedProfile.bio});
+  }
 }

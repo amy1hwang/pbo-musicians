@@ -2,5 +2,11 @@
 <div *ngFor="let profile of profiles | async" class="panel panel-default">
   <div class="panel-body">
     <h4 (click)="goToDetailPage(profile)">{{profile.name}}</h4>
+  <div *ngIf="currentRoute === '/admin'">
+      <h5>{{profile.instrument}}{{profile.chair}}</h5>
+      <p>{{profile.bio}}</p>
+      <hr>
+      <app-edit-profile [selectedProfile]="profile"></app-edit-profile>
+    </div>
   </div>
 </div>
