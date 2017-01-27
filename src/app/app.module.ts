@@ -10,9 +10,11 @@ import { AddProfileComponent } from './add-profile/add-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProfileListComponent } from './profile-list/profile-list.component';
 import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
+
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { InstrumentPipe } from './instrument.pipe';
 
 
 export const firebaseConfig = {
@@ -30,7 +32,8 @@ export const firebaseConfig = {
     EditProfileComponent,
     AboutComponent,
     AddProfileComponent,
-    ProfileDetailComponent
+    ProfileDetailComponent,
+    InstrumentPipe
   ],
   imports: [
     BrowserModule,

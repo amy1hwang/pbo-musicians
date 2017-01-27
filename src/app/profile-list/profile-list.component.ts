@@ -15,6 +15,12 @@ export class ProfileListComponent implements OnInit {
   profiles: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
+  filterByInstrument: string = "All";
+
+  onChange(optionFromMenu) {
+    this.filterByInstrument = optionFromMenu;
+  }
+
   constructor(private router: Router, private profileService: ProfileService){}
 
   ngOnInit(){
