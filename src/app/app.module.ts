@@ -10,6 +10,7 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { AboutComponent } from './about/about.component';
 import { AddProfileComponent } from './add-profile/add-profile.component';
 import { routing } from './app.routing';
+import { ProfileDetailComponent } from './profile-detail/profile-detail.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { routing } from './app.routing';
     AdminComponent,
     EditProfileComponent,
     AboutComponent,
-    AddProfileComponent
+    AddProfileComponent,
+    ProfileDetailComponent
   ],
   imports: [
     BrowserModule,
