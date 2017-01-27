@@ -1,6 +1,23 @@
-# MusicLesson
+# PBO Musicians
+## by Amy Hwang
+## January 27, 2017
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+
+## Description of PBO Musicians
+This website manages the roster of Portland Baroque Orchestra.
+
+## Technologies Used
+  * Git
+  * NodeJS
+  * Bower
+  * Angular
+
+## Setup Instruction
+  1. Clone repository.
+  2. Change directory to 'pbomusicians'
+  2. Run $ npm install in Terminal.
+  3. Run $ bower install in Terminal.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
