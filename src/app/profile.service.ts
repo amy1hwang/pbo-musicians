@@ -29,4 +29,8 @@ export class ProfileService {
                                 chair: localUpdatedProfile.chair,
                                 bio: localUpdatedProfile.bio});
   }
+  deleteProfile(localProfileToDelete){
+    var profileEntryInFirebase = this.getProfileById(localProfileToDelete.$key);
+    profileEntryInFirebase.remove();
+  }
 }

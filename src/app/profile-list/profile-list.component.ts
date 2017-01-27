@@ -24,4 +24,5 @@ export class ProfileListComponent implements OnInit {
   goToDetailPage(clickedProfile) {
     this.router.navigate(['profiles', clickedProfile.$key]);
   };
+
 }

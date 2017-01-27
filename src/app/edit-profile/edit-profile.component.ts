@@ -20,4 +20,10 @@ export class EditProfileComponent implements OnInit {
   beginUpdatingProfile(profileToUpdate){
     this.profileService.updateProfile(profileToUpdate);
   }
+  
+  beginDeletingProfile(profileToDelete){
+    if(confirm("Are you sure you want to delete this profile?")){
+      this.profileService.deleteProfile(profileToDelete);
+    }
+  }
 }
