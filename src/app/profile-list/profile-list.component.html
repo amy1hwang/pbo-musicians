@@ -1,7 +1,6 @@
 <h2>Profile List</h2>
-<div *ngFor="let profile of profiles" class="panel panel-default">
+<div *ngFor="let profile of profiles | async" class="panel panel-default">
   <div class="panel-body">
     <h4 (click)="goToDetailPage(profile)">{{profile.name}}</h4>
-    <h5>{{profile.instrument}}{{profile.chair}}</h5>
   </div>
 </div>

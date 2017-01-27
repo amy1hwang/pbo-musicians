@@ -1,5 +1,5 @@
 <div>
-  <h4>{{profileToDisplay.name}}</h4>
-  <h5>{{profileToDisplay.instrument}}{{profileToDisplay.chair}}</h5>
-  <p>{{profileToDisplay.bio}}</p>
+  <h4>{{(profileToDisplay | async)?.name}}</h4>
+  <h5>{{(profileToDisplay | async)?.instrument}}{{(profileToDisplay | async)?.chair}}</h5>
+  <p>{{(profileToDisplay | async)?.bio}}</p>
 </div>
