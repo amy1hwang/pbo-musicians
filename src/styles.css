@@ -49,18 +49,32 @@
 
 input, button, select, textarea {
   outline: none;
-  border-radius: 2px;
-  border: 1.5px solid black;
+  border-radius: 0 !important;
+  border: 1.5px solid black !important;
   background: none;
   font-family: sans-serif;
 }
 
-.panel-default {
+.button {
+  margin-bottom: 30px;
+}
+
+.panel-default > .panel-heading {
+  background-color: black !important;
+}
+
+.panel-title {
+  color: white !important;
+}
+
+.panel, .panel-default {
+  border-color: #DDD0AF !important;
+  border-radius: 0 !important;
   width: 60%;
   transition: background .3s ease-out;
 }
 
-.panel-default:hover {
+.musician:hover {
   background-color: #DDD0AF;
 }
 

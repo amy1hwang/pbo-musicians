@@ -5,7 +5,7 @@
     Sort by Instruments:
     <select (change)="onChange($event.target.value)">
       <option value="All" selected="selected">All</option>
-      <option value="Violin">Violin</option>
+      <option value="Violin">Violin</option>s
       <option value="Viola">Viola</option>
       <option value="Violoncello">Violoncello</option>
       <option value="Viola da gamba">Viola da gamba</option>
@@ -22,7 +22,7 @@
     </select>
   </div>
 
-  <div *ngFor="let profile of profiles | async | instrument: filterByInstrument " class="panel panel-default">
+  <div *ngFor="let profile of profiles | async | instrument: filterByInstrument " class="panel panel-default musician">
     <div class="panel-body">
       <h4 class="preview" (click)="goToDetailPage(profile)">{{profile.name}}</h4>
     <div *ngIf="currentRoute === '/admin'">
