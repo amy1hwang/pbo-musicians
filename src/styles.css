@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 .navbarb {
+  margin-top: 30px;
   height: 80px;
 }
 
 .navbar-header {
   height: 80px;
+}
+
+.navbar-header:hover {
+  cursor: pointer;
 }
 
 .navright {
@@ -13,6 +18,7 @@
   justify-content: flex-end;
   align-items: center;
 }
+
 .navright a {
   font-size: 1.2em;
   color: #756231;
@@ -31,6 +37,53 @@
 
 .main {
   padding-top: 30px;
+}
+
+.select {
+  margin: 30px 0;
+}
+
+.select-title {
+  margin: 20px 0;
+}
+
+input, button, select, textarea {
+  outline: none;
+  border-radius: 2px;
+  border: 1.5px solid black;
+  background: none;
+  font-family: sans-serif;
+}
+
+.panel-default {
+  width: 60%;
+  transition: background .3s ease-out;
+}
+
+.panel-default:hover {
+  background-color: #DDD0AF;
+}
+
+.preview {
+  text-transform: uppercase;
+  color: #444444;
+  letter-spacing: 1px;
+}
+
+.bio {
+  width: 60%;
+}
+
+.name {
+  margin: 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.inst {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #444444;
 }
 
 .headerimg {

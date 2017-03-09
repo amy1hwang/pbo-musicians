@@ -1,27 +1,30 @@
 <div class="list">
-  <h2>Profile List</h2>
-  Sort by Instruments:
-  <select (change)="onChange($event.target.value)">
-    <option value="All" selected="selected">All</option>
-    <option value="Violin">Violin</option>
-    <option value="Viola">Viola</option>
-    <option value="Violoncello">Violoncello</option>
-    <option value="Viola da gamba">Viola da gamba</option>
-    <option value="Contrabass and Violone">Contrabass and Violone</option>
-    <option value="Harpsichord and Organ">Harpsichord and Organ</option>
-    <option value="Guitar, Theorbo and Lute">Guitar, Theorbo and Lute</option>
-    <option value="Flute">Flute</option>
-    <option value="Oboe">Oboe</option>
-    <option value="Recorder">Recorder</option>
-    <option value="Bassoon">Bassoon</option>
-    <option value="Horn">Horn</option>
-    <option value="Trumpet">Trumpet</option>
-    <option value="Timpani and Percussion">Timpani and Percussion</option>
-  </select>
+
+  <div class="select">
+    <h2 class="select-title">Profile List</h2>
+    Sort by Instruments:
+    <select (change)="onChange($event.target.value)">
+      <option value="All" selected="selected">All</option>
+      <option value="Violin">Violin</option>
+      <option value="Viola">Viola</option>
+      <option value="Violoncello">Violoncello</option>
+      <option value="Viola da gamba">Viola da gamba</option>
+      <option value="Contrabass and Violone">Contrabass and Violone</option>
+      <option value="Harpsichord and Organ">Harpsichord and Organ</option>
+      <option value="Guitar, Theorbo and Lute">Guitar, Theorbo and Lute</option>
+      <option value="Flute">Flute</option>
+      <option value="Oboe">Oboe</option>
+      <option value="Recorder">Recorder</option>
+      <option value="Bassoon">Bassoon</option>
+      <option value="Horn">Horn</option>
+      <option value="Trumpet">Trumpet</option>
+      <option value="Timpani and Percussion">Timpani and Percussion</option>
+    </select>
+  </div>
 
   <div *ngFor="let profile of profiles | async | instrument: filterByInstrument " class="panel panel-default">
     <div class="panel-body">
-      <h4 (click)="goToDetailPage(profile)">{{profile.name}}</h4>
+      <h4 class="preview" (click)="goToDetailPage(profile)">{{profile.name}}</h4>
     <div *ngIf="currentRoute === '/admin'">
       <h5>{{profile.instrument}}{{profile.chair}}</h5>
       <p>{{profile.bio}}</p>
